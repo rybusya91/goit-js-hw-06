@@ -5,8 +5,13 @@ inputEl.addEventListener('blur', onlnputBlur);
 function onlnputBlur(event) {
     const total = event.currentTarget.value.length
     if (Number(inputEl.dataset.length)!==total) {
+        inputEl.classList.remove('valid');
         inputEl.classList.add('invalid');
-        return;
+       
+    } else {
+        inputEl.classList.remove('invalid');
+       inputEl.classList.add('valid'); 
     }
-    inputEl.classList.add('valid');
+    
 }
+
